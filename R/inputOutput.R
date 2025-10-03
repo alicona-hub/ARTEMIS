@@ -30,10 +30,19 @@ getConDF <- function(connectionDetails, json, name, cdmSchema, writeSchema){
                                                          cohortTableNames = cohortTableNames,
                                                          cohortDefinitionSet = cohortsToCreate)
 
-  subject_ids <- DatabaseConnector::dbGetQuery(conn = connection,
-                                               statement = paste("SELECT subject_id FROM ",writeSchema,".",name,sep=""))
+  subject_ids <- DatabaseConnector::dbGetQuery(
+  conn = connection,
+  statement = paste("SELECT subject_id FROM ", writeSchema, ".", name, sep = "")
+)
 
-  sql_template <- "
+if (nrow(subject_ids) == 0) {
+  message("No subjects found in cohort: ", name)
+  return(data.frame())  
+}
+
+ids <- paste(subject_ids$subject_id, collapse = ", ")
+
+sql_template <- "
 WITH filtered_drug_exposure AS (
   SELECT drug_exposure.person_id,
          drug_exposure.drug_exposure_start_date,
@@ -41,21 +50,19 @@ WITH filtered_drug_exposure AS (
          concept_ancestor.ancestor_concept_id,
          concept.concept_name
   FROM @cdmSchema.drug_exposure
-  LEFT JOIN @cdmSchema.concept_ancestor ON drug_exposure.drug_concept_id = concept_ancestor.descendant_concept_id
-  LEFT JOIN @cdmSchema.concept ON concept_ancestor.ancestor_concept_id = concept.concept_id
+  LEFT JOIN @cdmSchema.concept_ancestor 
+    ON drug_exposure.drug_concept_id = concept_ancestor.descendant_concept_id
+  LEFT JOIN @cdmSchema.concept 
+    ON concept_ancestor.ancestor_concept_id = concept.concept_id
   WHERE drug_exposure.person_id IN (@subject_ids)
     AND LOWER(concept.concept_class_id) = 'ingredient'
 )
 SELECT * FROM filtered_drug_exposure;
 "
-  
-ids <- paste(subject_ids$subject_id, collapse = ", ")
 
-rendered_sql <- SqlRender::render(
-  sql_template,
-  subject_ids = ids,
-  cdmSchema = cdmSchema
-)
+rendered_sql <- SqlRender::render(sql_template,
+                                  subject_ids = ids,
+                                  cdmSchema = cdmSchema)
 
 sql_t <- SqlRender::translate(rendered_sql, "postgresql")
 
