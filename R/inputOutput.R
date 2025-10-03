@@ -43,16 +43,24 @@ WITH filtered_drug_exposure AS (
   FROM @cdmSchema.drug_exposure
   LEFT JOIN @cdmSchema.concept_ancestor ON drug_exposure.drug_concept_id = concept_ancestor.descendant_concept_id
   LEFT JOIN @cdmSchema.concept ON concept_ancestor.ancestor_concept_id = concept.concept_id
-  WHERE drug_exposure.person_id IN @subject_ids
+  WHERE drug_exposure.person_id IN (@subject_ids)
     AND LOWER(concept.concept_class_id) = 'ingredient'
 )
 SELECT * FROM filtered_drug_exposure;
 "
+  
+ids <- paste(subject_ids$subject_id, collapse = ", ")
 
-rendered_sql <- SqlRender::render(sql_template, subject_ids = gsub("c","",paste(subject_ids)), cdmSchema = cdmSchema)
+rendered_sql <- SqlRender::render(
+  sql_template,
+  subject_ids = ids,
+  cdmSchema = cdmSchema
+)
+
+sql_t <- SqlRender::translate(rendered_sql, "postgresql")
 
 con_df <- DatabaseConnector::dbGetQuery(conn = connection,
-                                        statement = rendered_sql)
+                                        statement = sql_t)
 
 con_df <- as.data.frame(con_df)
 
