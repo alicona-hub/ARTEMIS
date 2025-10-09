@@ -1,64 +1,87 @@
-#' Generate a con_df dataframe without using CDMConnector
-#' @param connectionDetails A set of DatabaseConnector connectiondetails
-#' @param json A loaded cohort from loadJSON()
+#' Generate a con_df dataframe (without concept_ancestor join)
+#' @param connectionDetails A set of DatabaseConnector connection details
+#' @param json A loaded cohort from loadJSON() or CDMConnector::readCohortSet()
 #' @param name A cohort-specific name for written tables
-#' @param cdmSchema A schema containing a valid OMOP CDM
-#' @param writeSchema A schema where the user has write access
-#' @return A con_df dataframe
+#' @param cdmSchema Schema containing a valid OMOP CDM
+#' @param writeSchema Schema where the user has write access
+#' @return A con_df dataframe (person_id, drug_exposure_start_date, concept info)
 #' @export
-getConDF <- function(connectionDetails, json, name, cdmSchema, writeSchema){
-
+getConDF <- function(connectionDetails, json, name, cdmSchema, writeSchema) {
+  message("Connecting using PostgreSQL driver")
   connection <- DatabaseConnector::connect(connectionDetails = connectionDetails)
-
+  on.exit(DatabaseConnector::disconnect(connection))
+  
+  # ---- 1. Create empty cohort definition set
   cohortsToCreate <- CohortGenerator::createEmptyCohortDefinitionSet()
+  
+  # ---- 2. Convert JSON to CirceR expression
   cohortExpression <- CirceR::cohortExpressionFromJson(json$json[[1]])
-  cohortSql <- CirceR::buildCohortQuery(cohortExpression, options = CirceR::createGenerateOptions(generateStats = FALSE))
-  cohortsToCreate <- rbind(cohortsToCreate, data.frame(cohortId = 1,
-                                                       cohortName = name,
-                                                       sql = cohortSql,
-                                                       stringsAsFactors = FALSE))
-
+  cohortSql <- CirceR::buildCohortQuery(
+    cohortExpression,
+    options = CirceR::createGenerateOptions(generateStats = FALSE)
+  )
+  
+  cohortsToCreate <- rbind(
+    cohortsToCreate,
+    data.frame(
+      cohortId = 1,
+      cohortName = name,
+      sql = cohortSql,
+      stringsAsFactors = FALSE
+    )
+  )
+  
+  # ---- 3. Create cohort tables in write schema
   cohortTableNames <- CohortGenerator::getCohortTableNames(cohortTable = name)
-
-  CohortGenerator::createCohortTables(connection = connection,
-                                      cohortDatabaseSchema = writeSchema,
-                                      cohortTableNames = cohortTableNames)
-
-  cohortsGenerated <- CohortGenerator::generateCohortSet(connection = connection,
-                                                         cdmDatabaseSchema = cdmSchema,
-                                                         cohortDatabaseSchema = writeSchema,
-                                                         cohortTableNames = cohortTableNames,
-                                                         cohortDefinitionSet = cohortsToCreate)
-
-  subject_ids <- DatabaseConnector::dbGetQuery(conn = connection,
-                                               statement = paste("SELECT subject_id FROM ",writeSchema,".",name,sep=""))
-
-  sql_template <- "
-WITH filtered_drug_exposure AS (
-  SELECT drug_exposure.person_id,
-         drug_exposure.drug_exposure_start_date,
-         drug_exposure.drug_concept_id,
-         concept_ancestor.ancestor_concept_id,
-         concept.concept_name
-  FROM @cdmSchema.drug_exposure
-  LEFT JOIN @cdmSchema.concept_ancestor ON drug_exposure.drug_concept_id = concept_ancestor.descendant_concept_id
-  LEFT JOIN @cdmSchema.concept ON concept_ancestor.ancestor_concept_id = concept.concept_id
-  WHERE drug_exposure.person_id IN @subject_ids
-    AND LOWER(concept.concept_class_id) = 'ingredient'
-)
-SELECT * FROM filtered_drug_exposure;
-"
-
-rendered_sql <- SqlRender::render(sql_template, subject_ids = gsub("c","",paste(subject_ids)), cdmSchema = cdmSchema)
-
-con_df <- DatabaseConnector::dbGetQuery(conn = connection,
-                                        statement = rendered_sql)
-
-con_df <- as.data.frame(con_df)
-
-return(con_df)
-
+  CohortGenerator::createCohortTables(
+    connection = connection,
+    cohortDatabaseSchema = writeSchema,
+    cohortTableNames = cohortTableNames
+  )
+  
+  # ---- 4. Generate cohort
+  CohortGenerator::generateCohortSet(
+    connection = connection,
+    cdmDatabaseSchema = cdmSchema,
+    cohortDatabaseSchema = writeSchema,
+    cohortTableNames = cohortTableNames,
+    cohortDefinitionSet = cohortsToCreate
+  )
+  
+  # ---- 5. Retrieve subject IDs
+  subject_ids <- DatabaseConnector::dbGetQuery(
+    conn = connection,
+    statement = paste0("SELECT subject_id FROM ", writeSchema, ".", name)
+  )
+  
+  if (nrow(subject_ids) == 0) {
+    warning("No subjects found in cohort: ", name)
+    return(data.frame())
+  }
+  
+  subject_ids_vec <- paste(subject_ids$subject_id, collapse = ",")
+  
+  # ---- 6. Simplified query: direct join to concept only (no concept_ancestor)
+  sql_template <- glue::glue("
+    SELECT
+      de.person_id,
+      de.drug_exposure_start_date,
+      de.drug_concept_id AS ancestor_concept_id,
+      c.concept_name
+    FROM {cdmSchema}.drug_exposure de
+    JOIN {cdmSchema}.concept c
+      ON de.drug_concept_id = c.concept_id
+    WHERE de.person_id IN ({subject_ids_vec})
+      AND LOWER(c.concept_class_id) = 'ingredient';
+  ")
+  
+  # ---- 7. Execute query
+  con_df <- DatabaseConnector::dbGetQuery(conn = connection, statement = sql_template)
+  
+  message("con_df successfully generated with ", nrow(con_df), " rows.")
+  return(as.data.frame(con_df))
 }
+
 
 #' Generate a set of patient drug record strings from a valid CDM connection and
 #' a valid cohort JSON.
