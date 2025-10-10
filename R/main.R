@@ -419,12 +419,26 @@ generateCohortStats <- function(connectionDetails, cdmSchema, con_df, stringDF){
   f_df <- as.data.frame(table(con_df_f$concept_name)/sum(table(con_df_f$concept_name)))
   t_df <- as.data.frame(table(con_df_temp$concept_name)/sum(table(con_df_temp$concept_name)))
 
-  m_df$Category <- "Untreated"
-  m_df$Gender <- "M"
-  f_df$Category <- "Untreated"
-  f_df$Gender <- "F"
-  t_df$Category <- "Untreated"
-  t_df$Gender <- "Total"
+  if (nrow(m_df) > 0) {
+    m_df$Category <- "Untreated"
+    m_df$Gender <- "M"
+  }
+  
+  if (nrow(f_df) > 0) {
+    f_df$Category <- "Untreated"
+    f_df$Gender <- "F"
+  }
+  
+  if (nrow(t_df) > 0) {
+    t_df$Category <- "Untreated"
+    t_df$Gender <- "Total"
+  }
+  #m_df$Category <- "Untreated"
+  #m_df$Gender <- "M"
+  #f_df$Category <- "Untreated"
+  #f_df$Gender <- "F"
+  #t_df$Category <- "Untreated"
+  #t_df$Gender <- "Total"
 
   colnames(m_df)[c(1,2)] <- c("variable","value")
   colnames(f_df)[c(1,2)] <- c("variable","value")
