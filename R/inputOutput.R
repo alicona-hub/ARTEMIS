@@ -83,6 +83,7 @@ getConDF <- function(connectionDetails, json, name, cdmSchema, writeSchema) {
 }
 
 
+
 #' Generate a set of patient drug record strings from a valid CDM connection and
 #' a valid cohort JSON.
 #' @param con_df A con_df dataframe returned by getCohortSet()
