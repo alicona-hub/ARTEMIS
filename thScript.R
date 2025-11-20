@@ -26,6 +26,13 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(
   port     = 5432,
   pathToDriver = "c:/temp/jdbcDrivers"
 )
+connectionDetails <- DatabaseConnector::createConnectionDetails(
+  dbms            = "iris", 
+  connectionString = "jdbc:IRIS://178.242.184.226:1972/BC",
+  user            = "_SYSTEM",
+  password        = "vmtest.25",
+  pathToDriver = "/Users/alissonlicona/.iris_jdbc"
+)
 
 conn <- DatabaseConnector::connect(connectionDetails)
 on.exit(DatabaseConnector::disconnect(conn), add = TRUE)
