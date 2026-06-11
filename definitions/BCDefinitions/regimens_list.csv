@@ -1,0 +1,228 @@
+﻿regName;shortString;Groups;Groups2
+Emp_1;"0.letrozole;";Aromatase;Aromatase
+Emp_2;"0.tamoxifen;";Hormonal;Hormonal
+Emp_3;"0.paclitaxel;";Chemo;Chemo only
+Emp_4;"0.anastrozole;";Aromatase;Aromatase
+Emp_5;"0.cyclophosphamide;";Chemo;Chemo only
+Emp_6;"0.pertuzumab;0.trastuzumab;";HER2-mAb;HER2-mAb
+Emp_7;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;";Chemo;Chemo only
+Emp_8;"0.capecitabine;";Chemo;Chemo only
+Emp_9;"0.docetaxel;";Chemo;Chemo only
+Emp_10;"0.exemestane;";Aromatase;Aromatase
+Emp_11;"0.fulvestrant;";SERD;SERD
+Emp_12;"0.ribociclib;";CDK4/6;CDK4/6
+Emp_13;"0.cyclophosphamide;0.docetaxel;";Chemo;Chemo only
+Emp_14;"0.doxorubicin;0.doxorubicinpegylatedliposomal;";Chemo;Chemo only
+Emp_15;"0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_16;"0.docetaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_17;"0.trastuzumab;";HER2-mAb;HER2-mAb
+Emp_18;"0.letrozole;0.ribociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_19;"0.palbociclib;";CDK4/6;CDK4/6
+Emp_20;"0.fulvestrant;0.ribociclib;";"SERD;CDK4/6";"SERD;CDK4/6"
+Emp_21;"0.abemaciclib;";CDK4/6;CDK4/6
+Emp_22;"0.capecitabine;0.lapatinib;";"HER2-TKI;Chemo";HER2-TKI
+Emp_23;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.paclitaxel;";Chemo;Chemo only
+Emp_24;"0.letrozole;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Aromatase";"HER2-mAb;Aromatase"
+Emp_25;"0.letrozole;0.palbociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_26;"0.cyclophosphamide;0.paclitaxel;";Chemo;Chemo only
+Emp_27;"0.fulvestrant;0.palbociclib;";"SERD;CDK4/6";"SERD;CDK4/6"
+Emp_28;"0.trastuzumabderuxtecan;";ADC;ADC
+Emp_29;"0.pertuzumab;0.tamoxifen;0.trastuzumab;";"HER2-mAb;Hormonal";"HER2-mAb;Hormonal"
+Emp_30;"0.lapatinib;";HER2-TKI;HER2-TKI
+Emp_31;"0.letrozole;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_32;"0.abemaciclib;0.letrozole;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_33;"0.letrozole;0.tamoxifen;";"Hormonal;Aromatase";"Hormonal;Aromatase"
+Emp_34;"0.anastrozole;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Aromatase";"HER2-mAb;Aromatase"
+Emp_35;"0.docetaxel;0.tamoxifen;";"Chemo;Hormonal";Hormonal
+Emp_36;"0.letrozole;0.trastuzumab;";"HER2-mAb;Aromatase";"HER2-mAb;Aromatase"
+Emp_37;"0.paclitaxel;0.tamoxifen;";"Chemo;Hormonal";Hormonal
+Emp_38;"0.cyclophosphamide;0.letrozole;";"Chemo;Aromatase";Aromatase
+Emp_39;"0.cyclophosphamide;0.docetaxel;0.doxorubicin;0.doxorubicinpegylatedliposomal;";Chemo;Chemo only
+Emp_40;"0.cyclophosphamide;0.docetaxel;0.tamoxifen;";"Chemo;Hormonal";Hormonal
+Emp_41;"0.capecitabine;0.fulvestrant;";"Chemo;SERD";SERD
+Emp_42;"0.docetaxel;0.letrozole;";"Chemo;Aromatase";Aromatase
+Emp_43;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.paclitaxel;";Chemo;Chemo only
+Emp_44;"0.alpelisib;";PI3K;PI3K
+Emp_45;"0.fulvestrant;0.paclitaxel;";"Chemo;SERD";SERD
+Emp_46;"0.anastrozole;0.letrozole;";Aromatase;Aromatase
+Emp_47;"0.anastrozole;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_48;"0.anastrozole;0.tamoxifen;";"Hormonal;Aromatase";"Hormonal;Aromatase"
+Emp_49;"0.cyclophosphamide;0.docetaxel;0.letrozole;";"Chemo;Aromatase";Aromatase
+Emp_50;"0.capecitabine;0.cyclophosphamide;";Chemo;Chemo only
+Emp_51;"0.capecitabine;0.letrozole;";"Chemo;Aromatase";Aromatase
+Emp_52;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_53;"0.cyclophosphamide;0.tamoxifen;";"Chemo;Hormonal";Hormonal
+Emp_54;"0.capecitabine;0.docetaxel;";Chemo;Chemo only
+Emp_55;"0.abemaciclib;0.fulvestrant;";"SERD;CDK4/6";"SERD;CDK4/6"
+Emp_56;"0.anastrozole;0.cyclophosphamide;";"Chemo;Aromatase";Aromatase
+Emp_57;"0.capecitabine;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_58;"0.cyclophosphamide;0.docetaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_59;"0.anastrozole;0.fulvestrant;";"Aromatase;SERD";"Aromatase;SERD"
+Emp_60;"0.exemestane;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Aromatase";"HER2-mAb;Aromatase"
+Emp_61;"0.exemestane;0.tamoxifen;";"Hormonal;Aromatase";"Hormonal;Aromatase"
+Emp_62;"0.fulvestrant;0.letrozole;0.ribociclib;";"Aromatase;SERD;CDK4/6";"Aromatase;SERD;CDK4/6"
+Emp_63;"0.anastrozole;0.capecitabine;";"Chemo;Aromatase";Aromatase
+Emp_64;"0.anastrozole;0.docetaxel;";"Chemo;Aromatase";Aromatase
+Emp_65;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_66;"0.cyclophosphamide;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_67;"0.docetaxel;0.doxorubicin;0.doxorubicinpegylatedliposomal;";Chemo;Chemo only
+Emp_68;"0.docetaxel;0.fulvestrant;";"Chemo;SERD";SERD
+Emp_69;"0.alpelisib;0.fulvestrant;";"SERD;PI3K";"SERD;PI3K"
+Emp_70;"0.anastrozole;0.cyclophosphamide;0.docetaxel;";"Chemo;Aromatase";Aromatase
+Emp_71;"0.capecitabine;0.exemestane;";"Chemo;Aromatase";Aromatase
+Emp_72;"0.capecitabine;0.paclitaxel;";Chemo;Chemo only
+Emp_73;"0.cyclophosphamide;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_74;"0.docetaxel;0.paclitaxel;";Chemo;Chemo only
+Emp_75;"0.capecitabine;0.tamoxifen;";"Chemo;Hormonal";Hormonal
+Emp_76;"0.exemestane;0.letrozole;";Aromatase;Aromatase
+Emp_77;"0.tamoxifen;0.trastuzumab;";"HER2-mAb;Hormonal";"HER2-mAb;Hormonal"
+Emp_78;"0.abemaciclib;0.tamoxifen;";"Hormonal;CDK4/6";"Hormonal;CDK4/6"
+Emp_79;"0.anastrozole;0.ribociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_80;"0.cyclophosphamide;0.docetaxel;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_81;"0.exemestane;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_82;"0.fulvestrant;0.pertuzumab;0.trastuzumab;";"HER2-mAb;SERD";"HER2-mAb;SERD"
+Emp_83;"0.abemaciclib;0.exemestane;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_84;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.letrozole;";"Chemo;Aromatase";Aromatase
+Emp_85;"0.fulvestrant;0.letrozole;";"Aromatase;SERD";"Aromatase;SERD"
+Emp_86;"0.letrozole;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo;Aromatase";"HER2-mAb;Aromatase"
+Emp_87;"0.cyclophosphamide;0.exemestane;";"Chemo;Aromatase";Aromatase
+Emp_88;"0.fulvestrant;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo;SERD";"HER2-mAb;SERD"
+Emp_89;"0.anastrozole;0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;";"Chemo;Aromatase";Aromatase
+Emp_90;"0.cyclophosphamide;0.fulvestrant;";"Chemo;SERD";SERD
+Emp_91;"0.docetaxel;0.letrozole;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo;Aromatase";"HER2-mAb;Aromatase"
+Emp_92;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_93;"0.exemestane;0.palbociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_94;"0.exemestane;0.trastuzumab;";"HER2-mAb;Aromatase";"HER2-mAb;Aromatase"
+Emp_95;"0.anastrozole;0.exemestane;";Aromatase;Aromatase
+Emp_96;"0.capecitabine;0.lapatinib;0.trastuzumab;";"HER2-mAb;HER2-TKI;Chemo";"HER2-mAb;HER2-TKI"
+Emp_97;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.fulvestrant;";"Chemo;SERD";SERD
+Emp_98;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.tamoxifen;";"Chemo;Hormonal";Hormonal
+Emp_99;"0.docetaxel;0.fulvestrant;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo;SERD";"HER2-mAb;SERD"
+Emp_100;"0.docetaxel;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_101;"0.exemestane;0.fulvestrant;";"Aromatase;SERD";"Aromatase;SERD"
+Emp_102;"0.exemestane;0.ribociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_103;"0.anastrozole;0.palbociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_104;"0.capecitabine;0.cyclophosphamide;0.lapatinib;";"HER2-TKI;Chemo";HER2-TKI
+Emp_105;"0.cyclophosphamide;0.letrozole;0.ribociclib;";"Chemo;Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_106;"0.cyclophosphamide;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_107;"0.docetaxel;0.exemestane;";"Chemo;Aromatase";Aromatase
+Emp_108;"0.docetaxel;0.exemestane;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo;Aromatase";"HER2-mAb;Aromatase"
+Emp_109;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.fulvestrant;";"Chemo;SERD";SERD
+Emp_110;"0.fulvestrant;0.palbociclib;0.ribociclib;";"SERD;CDK4/6";"SERD;CDK4/6"
+Emp_111;"0.letrozole;0.ribociclib;0.tamoxifen;";"Hormonal;Aromatase;CDK4/6";"Hormonal;Aromatase;CDK4/6"
+Emp_112;"0.paclitaxel;0.pertuzumab;0.tamoxifen;0.trastuzumab;";"HER2-mAb;Chemo;Hormonal";"HER2-mAb;Hormonal"
+Emp_113;"0.paclitaxel;0.ribociclib;";"Chemo;CDK4/6";CDK4/6
+Emp_114;"0.anastrozole;0.fulvestrant;0.palbociclib;";"Aromatase;SERD;CDK4/6";"Aromatase;SERD;CDK4/6"
+Emp_115;"0.anastrozole;0.trastuzumab;";"HER2-mAb;Aromatase";"HER2-mAb;Aromatase"
+Emp_116;"0.capecitabine;0.cyclophosphamide;0.docetaxel;";Chemo;Chemo only
+Emp_117;"0.capecitabine;0.doxorubicin;0.doxorubicinpegylatedliposomal;";Chemo;Chemo only
+Emp_118;"0.capecitabine;0.lapatinib;0.letrozole;";"HER2-TKI;Chemo;Aromatase";"HER2-TKI;Aromatase"
+Emp_119;"0.cyclophosphamide;0.letrozole;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_120;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.letrozole;";"Chemo;Aromatase";Aromatase
+Emp_121;"0.letrozole;0.paclitaxel;0.ribociclib;";"Chemo;Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_122;"0.abemaciclib;0.anastrozole;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_123;"0.abemaciclib;0.ribociclib;";CDK4/6;CDK4/6
+Emp_124;"0.alpelisib;0.capecitabine;";"Chemo;PI3K";PI3K
+Emp_125;"0.anastrozole;0.capecitabine;0.cyclophosphamide;";"Chemo;Aromatase";Aromatase
+Emp_126;"0.anastrozole;0.docetaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo;Aromatase";"HER2-mAb;Aromatase"
+Emp_127;"0.anastrozole;0.docetaxel;0.tamoxifen;";"Chemo;Hormonal;Aromatase";"Hormonal;Aromatase"
+Emp_128;"0.anastrozole;0.letrozole;0.palbociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_129;"0.anastrozole;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo;Aromatase";"HER2-mAb;Aromatase"
+Emp_130;"0.capecitabine;0.docetaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_131;"0.capecitabine;0.exemestane;0.fulvestrant;";"Chemo;Aromatase;SERD";"Aromatase;SERD"
+Emp_132;"0.capecitabine;0.fulvestrant;0.lapatinib;";"HER2-TKI;Chemo;SERD";"HER2-TKI;SERD"
+Emp_133;"0.capecitabine;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_134;"0.cyclophosphamide;0.docetaxel;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.paclitaxel;";Chemo;Chemo only
+Emp_135;"0.cyclophosphamide;0.fulvestrant;0.ribociclib;";"Chemo;SERD;CDK4/6";"SERD;CDK4/6"
+Emp_136;"0.cyclophosphamide;0.lapatinib;";"HER2-TKI;Chemo";HER2-TKI
+Emp_137;"0.cyclophosphamide;0.palbociclib;";"Chemo;CDK4/6";CDK4/6
+Emp_138;"0.docetaxel;0.pertuzumab;0.tamoxifen;0.trastuzumab;";"HER2-mAb;Chemo;Hormonal";"HER2-mAb;Hormonal"
+Emp_139;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_140;"0.fulvestrant;0.letrozole;0.palbociclib;";"Aromatase;SERD;CDK4/6";"Aromatase;SERD;CDK4/6"
+Emp_141;"0.fulvestrant;0.tamoxifen;";"Hormonal;SERD";"Hormonal;SERD"
+Emp_142;"0.letrozole;0.palbociclib;0.ribociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_143;"0.letrozole;0.trastuzumabderuxtecan;";"ADC;Aromatase";"ADC;Aromatase"
+Emp_144;"0.palbociclib;0.ribociclib;";CDK4/6;CDK4/6
+Emp_145;"0.ribociclib;0.tamoxifen;";"Hormonal;CDK4/6";"Hormonal;CDK4/6"
+Emp_146;"0.abemaciclib;0.anastrozole;0.letrozole;0.tamoxifen;";"Hormonal;Aromatase;CDK4/6";"Hormonal;Aromatase;CDK4/6"
+Emp_147;"0.abemaciclib;0.capecitabine;";"Chemo;CDK4/6";CDK4/6
+Emp_148;"0.abemaciclib;0.exemestane;0.palbociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_149;"0.abemaciclib;0.fulvestrant;0.letrozole;";"Aromatase;SERD;CDK4/6";"Aromatase;SERD;CDK4/6"
+Emp_150;"0.abemaciclib;0.palbociclib;";CDK4/6;CDK4/6
+Emp_151;"0.alpelisib;0.anastrozole;";"Aromatase;PI3K";"Aromatase;PI3K"
+Emp_152;"0.alpelisib;0.capecitabine;0.letrozole;";"Chemo;Aromatase;PI3K";"Aromatase;PI3K"
+Emp_153;"0.alpelisib;0.fulvestrant;0.pertuzumab;0.trastuzumab;";"HER2-mAb;SERD;PI3K";"HER2-mAb;SERD;PI3K"
+Emp_154;"0.anastrozole;0.capecitabine;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_155;"0.anastrozole;0.docetaxel;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_156;"0.anastrozole;0.doxorubicin;0.doxorubicinpegylatedliposomal;";"Chemo;Aromatase";Aromatase
+Emp_157;"0.anastrozole;0.fulvestrant;0.ribociclib;";"Aromatase;SERD;CDK4/6";"Aromatase;SERD;CDK4/6"
+Emp_158;"0.anastrozole;0.fulvestrant;0.tamoxifen;";"Hormonal;Aromatase;SERD";"Hormonal;Aromatase;SERD"
+Emp_159;"0.anastrozole;0.lapatinib;";"HER2-TKI;Aromatase";"HER2-TKI;Aromatase"
+Emp_160;"0.anastrozole;0.letrozole;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_161;"0.anastrozole;0.letrozole;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Aromatase";"HER2-mAb;Aromatase"
+Emp_162;"0.anastrozole;0.letrozole;0.tamoxifen;";"Hormonal;Aromatase";"Hormonal;Aromatase"
+Emp_163;"0.anastrozole;0.paclitaxel;0.tamoxifen;";"Chemo;Hormonal;Aromatase";"Hormonal;Aromatase"
+Emp_164;"0.capecitabine;0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;";Chemo;Chemo only
+Emp_165;"0.capecitabine;0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.fulvestrant;";"Chemo;SERD";SERD
+Emp_166;"0.capecitabine;0.cyclophosphamide;0.letrozole;";"Chemo;Aromatase";Aromatase
+Emp_167;"0.capecitabine;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.lapatinib;";"HER2-TKI;Chemo";HER2-TKI
+Emp_168;"0.capecitabine;0.exemestane;0.lapatinib;";"HER2-TKI;Chemo;Aromatase";"HER2-TKI;Aromatase"
+Emp_169;"0.capecitabine;0.lapatinib;0.paclitaxel;";"HER2-TKI;Chemo";HER2-TKI
+Emp_170;"0.capecitabine;0.lapatinib;0.pertuzumab;0.trastuzumab;";"HER2-mAb;HER2-TKI;Chemo";"HER2-mAb;HER2-TKI"
+Emp_171;"0.capecitabine;0.lapatinib;0.tamoxifen;";"HER2-TKI;Chemo;Hormonal";"HER2-TKI;Hormonal"
+Emp_172;"0.capecitabine;0.letrozole;0.palbociclib;";"Chemo;Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_173;"0.capecitabine;0.paclitaxel;0.tamoxifen;";"Chemo;Hormonal";Hormonal
+Emp_174;"0.capecitabine;0.ribociclib;";"Chemo;CDK4/6";CDK4/6
+Emp_175;"0.capecitabine;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_176;"0.cyclophosphamide;0.docetaxel;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.fulvestrant;";"Chemo;SERD";SERD
+Emp_177;"0.cyclophosphamide;0.docetaxel;0.exemestane;";"Chemo;Aromatase";Aromatase
+Emp_178;"0.cyclophosphamide;0.docetaxel;0.fulvestrant;0.ribociclib;";"Chemo;SERD;CDK4/6";"SERD;CDK4/6"
+Emp_179;"0.cyclophosphamide;0.docetaxel;0.letrozole;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_180;"0.cyclophosphamide;0.docetaxel;0.paclitaxel;";Chemo;Chemo only
+Emp_181;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.exemestane;";"Chemo;Aromatase";Aromatase
+Emp_182;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.fulvestrant;0.paclitaxel;";"Chemo;SERD";SERD
+Emp_183;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.letrozole;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_184;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.letrozole;0.ribociclib;";"Chemo;Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_185;"0.cyclophosphamide;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.letrozole;0.tamoxifen;";"Chemo;Hormonal;Aromatase";"Hormonal;Aromatase"
+Emp_186;"0.cyclophosphamide;0.fulvestrant;0.letrozole;";"Chemo;Aromatase;SERD";"Aromatase;SERD"
+Emp_187;"0.cyclophosphamide;0.fulvestrant;0.paclitaxel;";"Chemo;SERD";SERD
+Emp_188;"0.cyclophosphamide;0.fulvestrant;0.palbociclib;";"Chemo;SERD;CDK4/6";"SERD;CDK4/6"
+Emp_189;"0.cyclophosphamide;0.letrozole;0.palbociclib;";"Chemo;Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_190;"0.cyclophosphamide;0.letrozole;0.palbociclib;0.tamoxifen;";"Chemo;Hormonal;Aromatase;CDK4/6";"Hormonal;Aromatase;CDK4/6"
+Emp_191;"0.cyclophosphamide;0.ribociclib;";"Chemo;CDK4/6";CDK4/6
+Emp_192;"0.docetaxel;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.paclitaxel;";Chemo;Chemo only
+Emp_193;"0.docetaxel;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_194;"0.docetaxel;0.doxorubicin;0.doxorubicinpegylatedliposomal;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo";HER2-mAb
+Emp_195;"0.docetaxel;0.fulvestrant;0.letrozole;";"Chemo;Aromatase;SERD";"Aromatase;SERD"
+Emp_196;"0.docetaxel;0.letrozole;0.ribociclib;";"Chemo;Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_197;"0.docetaxel;0.letrozole;0.tamoxifen;";"Chemo;Hormonal;Aromatase";"Hormonal;Aromatase"
+Emp_198;"0.docetaxel;0.palbociclib;";"Chemo;CDK4/6";CDK4/6
+Emp_199;"0.docetaxel;0.ribociclib;";"Chemo;CDK4/6";CDK4/6
+Emp_200;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.exemestane;";"Chemo;Aromatase";Aromatase
+Emp_201;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.fulvestrant;0.paclitaxel;0.ribociclib;";"Chemo;SERD;CDK4/6";"SERD;CDK4/6"
+Emp_202;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.fulvestrant;0.ribociclib;";"Chemo;SERD;CDK4/6";"SERD;CDK4/6"
+Emp_203;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.palbociclib;";"Chemo;CDK4/6";CDK4/6
+Emp_204;"0.doxorubicin;0.doxorubicinpegylatedliposomal;0.tamoxifen;";"Chemo;Hormonal";Hormonal
+Emp_205;"0.exemestane;0.fulvestrant;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Aromatase;SERD";"HER2-mAb;Aromatase;SERD"
+Emp_206;"0.exemestane;0.letrozole;0.paclitaxel;";"Chemo;Aromatase";Aromatase
+Emp_207;"0.exemestane;0.letrozole;0.palbociclib;";"Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_208;"0.exemestane;0.paclitaxel;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Chemo;Aromatase";"HER2-mAb;Aromatase"
+Emp_209;"0.fulvestrant;0.lapatinib;";"HER2-TKI;SERD";"HER2-TKI;SERD"
+Emp_210;"0.fulvestrant;0.letrozole;0.paclitaxel;";"Chemo;Aromatase;SERD";"Aromatase;SERD"
+Emp_211;"0.fulvestrant;0.paclitaxel;0.ribociclib;";"Chemo;SERD;CDK4/6";"SERD;CDK4/6"
+Emp_212;"0.fulvestrant;0.paclitaxel;0.tamoxifen;";"Chemo;Hormonal;SERD";"Hormonal;SERD"
+Emp_213;"0.fulvestrant;0.pertuzumab;0.ribociclib;0.trastuzumab;";"HER2-mAb;SERD;CDK4/6";"HER2-mAb;SERD;CDK4/6"
+Emp_214;"0.fulvestrant;0.trastuzumab;";"HER2-mAb;SERD";"HER2-mAb;SERD"
+Emp_215;"0.fulvestrant;0.trastuzumabderuxtecan;";"ADC;SERD";"ADC;SERD"
+Emp_216;"0.lapatinib;0.pertuzumab;0.trastuzumab;";"HER2-mAb;HER2-TKI";"HER2-mAb;HER2-TKI"
+Emp_217;"0.letrozole;0.paclitaxel;0.palbociclib;";"Chemo;Aromatase;CDK4/6";"Aromatase;CDK4/6"
+Emp_218;"0.letrozole;0.pertuzumab;0.tamoxifen;0.trastuzumab;";"HER2-mAb;Hormonal;Aromatase";"HER2-mAb;Hormonal;Aromatase"
+Emp_219;"0.paclitaxel;0.trastuzumabderuxtecan;";"ADC;Chemo";ADC
+Emp_220;"0.palbociclib;0.tamoxifen;";"Hormonal;CDK4/6";"Hormonal;CDK4/6"
+;"0.abemaciclib;0.fulvestrant;0.palbociclib;";"SERD;CDK4/6";"SERD;CDK4/7"
+;"0.alpelisib;0.exemestane;0.fulvestrant;0.pertuzumab;0.trastuzumab;";"HER2-mAb;Aromatase;SERD;PI3K";"HER2-mAb;Aromatase;SERD;PI3K"
+;"0.capecitabine;0.cyclophosphamide;0.docetaxel;0.exemestane;";"Chemo;Aromatase";Aromatase
+;"0.capecitabine;0.cyclophosphamide;0.paclitaxel;";Chemo;Chemo
+;"0.capecitabine;0.docetaxel;0.paclitaxel;";Chemo;Chemo
+;"0.capecitabine;0.fulvestrant;0.lapatinib;0.pertuzumab;0.trastuzumab;";"HER2-mAb;HER2-TKI; SERD; Chemo";"HER2-mAb;HER2-TKI; SERD"
+;;;
