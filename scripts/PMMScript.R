@@ -247,7 +247,7 @@ validDrugs <- read.csv(
 #     drug, and timing information.
 # ------------------------------------------------------------------
 
-source("getConDF_noAncestor.R")
+source("R/getConDF_noAncestor.R")
 con_df <- getConDF_noAncestor(
   connectionDetails = connection_details,
   json = cohortSet,
@@ -640,7 +640,7 @@ regGroups <- regimens_total_groups %>%
 #     alignment coordinates for each patient treatment record.
 # ------------------------------------------------------------------
 
-source('own_generate_alignments.R')
+source('R/own_generate_alignments.R')
 output_own <- own_generate_alignments(
   stringDF_fixed,
   regimens_final_v2
@@ -692,7 +692,7 @@ output_own2 <- output_own %>%
 #   components into a single treatment episode.
 # ------------------------------------------------------------------
 
-source('postprocess_alignments.R')
+source('R/postprocess_alignments.R')
 processed_own <- postprocess_alignments(
   output_own,
   regimenCombine = 56
@@ -725,7 +725,7 @@ processed_own <- postprocess_alignments(
 # regimen administration patterns.
 # ------------------------------------------------------------------
 
-source('calculateEras_local.R')
+source('R/calculateEras_local.R')
 processedEras_combined <- processed_own %>%
   calculateEras_local(
     same_regimen_gap = 146,   # 56 + 90

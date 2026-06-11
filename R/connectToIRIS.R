@@ -21,7 +21,7 @@ connection_details <- DatabaseConnector::createConnectionDetails(
   dbms            = "iris",
   connectionString = "jdbc:IRIS://188.59.46.0:1972/PMM",
   user            = "_system",
-  password        = "vmtest.25",
+  password        = "",
   pathToDriver = driver_path
 )
 
