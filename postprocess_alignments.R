@@ -1,33 +1,43 @@
-postprocess_alignments <- function(df, regimenCombine = 30) {
-  required_cols <- c("personID", "regName", "Regimen", 
-                     "DrugRecord", "drugRec_Start", "drugRec_End")
-  if (!all(required_cols %in% names(df))) {
-    stop("Input data.frame must include: ", paste(required_cols, collapse = ", "))
-  }
-  
+postprocess_alignments <- function(df, regimenCombine) {
+
+  #df %>%
+  #  arrange(personID, regName, drugRec_Start) %>%
+  #  group_by(personID, regName) %>%
+
+  # Merge into 56-day regimen windows
+  #mutate(
+  #gap = drugRec_Start - lag(drugRec_End),
+  #same_window = ifelse(is.na(gap) | gap <= regimenCombine, 0, 1),
+  #window_id = cumsum(same_window)
+  #)
+
   df %>%
     arrange(personID, drugRec_Start) %>%
     group_by(personID) %>%
     mutate(
-      # Compute simple duration (within-regimen)
-      regLength = drugRec_End - drugRec_Start + 1,
-      # Compute time until next regimen starts
-      timeToNextRegimen = lead(drugRec_Start) - drugRec_End,
-      # Ensure no negatives
-      timeToNextRegimen = ifelse(is.na(timeToNextRegimen), NA, pmax(0, timeToNextRegimen)),
-      # Compute time to end of data (within patient)
-      timeToEOD = max(drugRec_End, na.rm = TRUE) - drugRec_End
+      gap = drugRec_Start - lag(drugRec_End),
+      same_window = ifelse(is.na(gap) | gap <= regimenCombine, 0, 1),
+      window_id = cumsum(same_window)
     ) %>%
-    ungroup() %>%
-    transmute(
-      t_start = drugRec_Start,
-      t_end = drugRec_End,
-      component = regName,
-      regimen = Regimen,
+
+    group_by(personID, regName, window_id) %>%
+    summarise(
+      t_start = min(drugRec_Start),
+      t_end = max(drugRec_End),
+      regimen = first(Regimen),
+      component = first(regName),
       adjustedS = 1,
-      personID = personID,
-      timeToNextRegimen = timeToNextRegimen,
-      timeToEOD = timeToEOD,
-      regLength = regLength
-    )
+      .groups = "drop_last"
+    ) %>%
+
+    ungroup() %>%
+    arrange(personID, t_start) %>%
+    group_by(personID) %>%
+    mutate(
+      timeToNextRegimen = lead(t_start) - t_end,
+      timeToNextRegimen = ifelse(is.na(timeToNextRegimen), NA, pmax(0, timeToNextRegimen)),
+      timeToEOD = max(t_end) - t_end,
+      regLength = t_end - t_start
+    ) %>%
+    ungroup()
 }
