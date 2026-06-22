@@ -1,3 +1,77 @@
+
+# ARTEMIS Treatment Pathway Extraction and Alignment
+
+A customized implementation of the ARTEMIS framework for extracting, standardizing, aligning, and analyzing treatment pathways using OMOP Common Data Model (CDM) data. This workflow extends the original ARTEMIS methodology with disease-specific adaptations, empirical regimen generation, customized alignment procedures, and treatment pathway visualization.
+
+## Overview
+
+This project provides an end-to-end pipeline for:
+
+- Cohort identification from OMOP CDM
+- Treatment exposure extraction
+- Treatment sequence generation
+- Empirical regimen discovery
+- Regimen alignment using ARTEMIS
+- Treatment era construction
+- Pathway analysis and visualization
+- Regimen-level summary statistics
+
+
+## How to Run the Workflow
+
+1. **Connect to IRIS**
+   
+   Before running the workflow, establish a connection to the IRIS environment using:
+
+   ```r
+   source("R/connectToIRIS.R")
+   ```
+
+   Ensure that all required connection details and credentials are correctly configured.
+
+2. **Run the Workflow Script**
+
+   Workflow scripts are located in the `scripts/` directory.
+
+Currently available workflows:
+
+| Workflow | Script | Last Updated |
+|-----------|---------|-------------|
+| Breast Cancer (BC) | `scripts/BCScript.R` | `2025-18-11` |
+| Multiple Myeloma (MM) | `scripts/PMMScript.R` | `2026-06-11` |
+
+Select the appropriate workflow and execute the script from top to bottom.
+
+Each script is organized into sequential sections and contains detailed documentation describing:
+
+- Required inputs
+- Processing steps
+- Intermediate outputs
+- Final outputs
+
+No additional configuration should be required beyond the project-specific settings documented in the script.
+
+3. **Review Outputs**
+
+   Once execution is complete, verify that all expected outputs have been generated successfully.
+
+4.  **Upload Results to IRIS**
+
+   After validating the outputs, run the IRIS upload script to transfer the generated datasets and analysis outputs to the IRIS environment.
+
+   ```r
+   source("R/uploadToIRIS.R")
+   ```
+
+---
+
+
+
+
+
+Source README:
+
+
 <p float="left">
 
 <img src="./img/artemis.png" style="vertical-align: center;" width="100"/>
